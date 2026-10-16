@@ -1,0 +1,403 @@
+{
+  "scope": "Michigan county rows, full available calendar years 2014-2024",
+  "training_years": [
+    2014,
+    2022
+  ],
+  "threshold_validation_year": 2023,
+  "fixed_test_year": 2024,
+  "excluded_2025_reason": "No explicit zero readings in audited source.",
+  "source_archive": "D:\\sem 5\\EAGLE_I_Project\\data\\raw",
+  "counties": 83,
+  "rows_by_split": {
+    "test": 45804,
+    "train": 272611,
+    "validation": 45004
+  },
+  "rows_by_year": {
+    "2014": 3371,
+    "2015": 24815,
+    "2016": 11386,
+    "2017": 26736,
+    "2018": 35619,
+    "2019": 41101,
+    "2020": 40744,
+    "2021": 43988,
+    "2022": 44851,
+    "2023": 45004,
+    "2024": 45804
+  },
+  "target": "Maximum of next three complete hourly county means >= county p90 estimated from all complete training-period observations (2014-2022); 3-hour UTC issue cadence.",
+  "missing_targets": "Incomplete next-three-hour windows are omitted; no missing reading is converted to zero.",
+  "outage_audits": [
+    {
+      "year": 2014,
+      "national_rows_scanned": 1689460,
+      "michigan_rows": 78036,
+      "invalid_michigan_rows": 0,
+      "valid_rows": 78036,
+      "counties_with_records": 79,
+      "complete_observed_county_hours": 15635,
+      "explicit_zero_records": 0,
+      "source_md5": "c7bfcf4b7fd26292f8d8801a26e8c52f",
+      "official_md5": "c7bfcf4b7fd26292f8d8801a26e8c52f",
+      "source_url": "https://ndownloader.figshare.com/files/42547717"
+    },
+    {
+      "year": 2015,
+      "national_rows_scanned": 12939157,
+      "michigan_rows": 592101,
+      "invalid_michigan_rows": 0,
+      "valid_rows": 592101,
+      "counties_with_records": 80,
+      "complete_observed_county_hours": 117612,
+      "explicit_zero_records": 0,
+      "source_md5": "774d837e6a0d4f20aab5c82448538d37",
+      "official_md5": "774d837e6a0d4f20aab5c82448538d37",
+      "source_url": "https://ndownloader.figshare.com/files/42547822"
+    },
+    {
+      "year": 2016,
+      "national_rows_scanned": 13306024,
+      "michigan_rows": 310905,
+      "invalid_michigan_rows": 0,
+      "valid_rows": 310905,
+      "counties_with_records": 80,
+      "complete_observed_county_hours": 60098,
+      "explicit_zero_records": 0,
+      "source_md5": "8e4e85e81db474a708278aabef1198ec",
+      "official_md5": "8e4e85e81db474a708278aabef1198ec",
+      "source_url": "https://ndownloader.figshare.com/files/42547825"
+    },
+    {
+      "year": 2017,
+      "national_rows_scanned": 15078364,
+      "michigan_rows": 560905,
+      "invalid_michigan_rows": 2813,
+      "valid_rows": 558092,
+      "counties_with_records": 80,
+      "complete_observed_county_hours": 116476,
+      "explicit_zero_records": 0,
+      "source_md5": "4faaeeb3b3e8e2d13d0e9238617ce3ce",
+      "official_md5": "4faaeeb3b3e8e2d13d0e9238617ce3ce",
+      "source_url": "https://ndownloader.figshare.com/files/42547828"
+    },
+    {
+      "year": 2018,
+      "national_rows_scanned": 21776806,
+      "michigan_rows": 1013331,
+      "invalid_michigan_rows": 283453,
+      "valid_rows": 729878,
+      "counties_with_records": 80,
+      "complete_observed_county_hours": 152845,
+      "explicit_zero_records": 0,
+      "source_md5": "726543e4a392e220108b035ba4c52e43",
+      "official_md5": "726543e4a392e220108b035ba4c52e43",
+      "source_url": "https://ndownloader.figshare.com/files/42547879"
+    },
+    {
+      "year": 2019,
+      "national_rows_scanned": 24074122,
+      "michigan_rows": 879175,
+      "invalid_michigan_rows": 38161,
+      "valid_rows": 841014,
+      "counties_with_records": 83,
+      "complete_observed_county_hours": 176905,
+      "explicit_zero_records": 0,
+      "source_md5": "0ff77af0106486eb7bdc6c5051bd916a",
+      "official_md5": "0ff77af0106486eb7bdc6c5051bd916a",
+      "source_url": "https://ndownloader.figshare.com/files/42547885"
+    },
+    {
+      "year": 2020,
+      "national_rows_scanned": 25545517,
+      "michigan_rows": 889196,
+      "invalid_michigan_rows": 35758,
+      "valid_rows": 853438,
+      "counties_with_records": 83,
+      "complete_observed_county_hours": 177282,
+      "explicit_zero_records": 0,
+      "source_md5": "3b1e76e7ff0445da2b9a2fe4819c0e88",
+      "official_md5": "3b1e76e7ff0445da2b9a2fe4819c0e88",
+      "source_url": "https://ndownloader.figshare.com/files/42547894"
+    },
+    {
+      "year": 2021,
+      "national_rows_scanned": 24826102,
+      "michigan_rows": 872393,
+      "invalid_michigan_rows": 30802,
+      "valid_rows": 841591,
+      "counties_with_records": 83,
+      "complete_observed_county_hours": 179789,
+      "explicit_zero_records": 0,
+      "source_md5": "b5a5912be793ca22dddcc73ca2c3379d",
+      "official_md5": "b5a5912be793ca22dddcc73ca2c3379d",
+      "source_url": "https://ndownloader.figshare.com/files/42547891"
+    },
+    {
+      "year": 2022,
+      "national_rows_scanned": 25796465,
+      "michigan_rows": 864179,
+      "invalid_michigan_rows": 0,
+      "valid_rows": 864179,
+      "counties_with_records": 83,
+      "complete_observed_county_hours": 183602,
+      "explicit_zero_records": 27970,
+      "source_md5": "0cd04f23ac90ec4ec20ce3a63dcfa25a",
+      "official_md5": "0cd04f23ac90ec4ec20ce3a63dcfa25a",
+      "source_url": "https://ndownloader.figshare.com/files/42547897"
+    },
+    {
+      "year": 2023,
+      "national_rows_scanned": 26101051,
+      "michigan_rows": 834644,
+      "invalid_michigan_rows": 19,
+      "valid_rows": 834625,
+      "counties_with_records": 83,
+      "complete_observed_county_hours": 179009,
+      "explicit_zero_records": 19671,
+      "source_md5": "4ef3f9290884b4151a43333d28f67369",
+      "official_md5": "4ef3f9290884b4151a43333d28f67369",
+      "source_url": "https://ndownloader.figshare.com/files/44574907"
+    },
+    {
+      "year": 2024,
+      "national_rows_scanned": 27701334,
+      "michigan_rows": 870294,
+      "invalid_michigan_rows": 0,
+      "valid_rows": 870294,
+      "counties_with_records": 83,
+      "complete_observed_county_hours": 186034,
+      "explicit_zero_records": 11038,
+      "source_md5": "13183facf56c196c061a238303c87973",
+      "official_md5": "13183facf56c196c061a238303c87973",
+      "source_url": "https://ndownloader.figshare.com/files/53581661"
+    }
+  ],
+  "weather_audits": [
+    {
+      "year": 2014,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2014-05-28T00%3A00%3A00Z&ets=2014-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "01ca4725fd51e6fc5341b7dd0a2f85c2c71f69cd8a65824b50e834009c02e362",
+      "source_rows": 389658,
+      "stations": 74,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 4
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2015,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2015-05-28T00%3A00%3A00Z&ets=2015-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "4d9d99be0b95aac4a1bfdb2ce4d0a9db3b7ea3c10af6694cf773f67a22ed9c7f",
+      "source_rows": 392068,
+      "stations": 74,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 1
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2016,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2016-05-28T00%3A00%3A00Z&ets=2016-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "61b4af87d25db7e1906ecf9fb778adff1847c27500f761d63b8e21352b2ee17b",
+      "source_rows": 364798,
+      "stations": 74,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 0
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2017,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2017-05-28T00%3A00%3A00Z&ets=2017-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "6e3d79f1a888fb537f37710b2720c07ecb62fe91ae695cceeb413c5e294e2341",
+      "source_rows": 381282,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 1
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2018,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2018-05-28T00%3A00%3A00Z&ets=2018-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "222c9de5e6266eb21f34931be78578c9f647722cebcda7795ada40812d7f311e",
+      "source_rows": 386708,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 1,
+        "altimeter_hpa": 1
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2019,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2019-05-28T00%3A00%3A00Z&ets=2019-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "7390a54c394fd3dbdc99de39e719f1f385d5e3064774805cca8874c14bc08f48",
+      "source_rows": 440971,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 1
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2020,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2020-05-28T00%3A00%3A00Z&ets=2020-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "c7e296bb14e9fd29af365467d3afda41b098fe4bc7b52342510cffe8a7c03706",
+      "source_rows": 413803,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 4
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2021,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2021-05-28T00%3A00%3A00Z&ets=2021-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "bafeffd269f1857ac2b13efca3acdf43e7ccaa389d3a7123be1429cadd0e5104",
+      "source_rows": 376034,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 0
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2022,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2022-05-28T00%3A00%3A00Z&ets=2022-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "4003d4fe89324e77a4c1fdeb26e40c8bc067b1134265a7131148daf06d8fd0fc",
+      "source_rows": 374828,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 1
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2023,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2023-05-28T00%3A00%3A00Z&ets=2023-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "4a7acc7d4a67a65de93211cfe778cc317e3aaaae07fb34514940643fca2882c1",
+      "source_rows": 375077,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 1
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    },
+    {
+      "year": 2024,
+      "source_url": "https://mesonet.agron.iastate.edu/cgi-bin/request/asos.py?station=ACB&station=ADG&station=AMN&station=ANJ&station=APN&station=ARB&station=AZO&station=BAX&station=BEH&station=BIV&station=BTL&station=CAD&station=CFS&station=CIU&station=CMX&station=CVX&station=D95&station=DET&station=DRM&station=DTW&station=DUH&station=ERY&station=ESC&station=FFX&station=FKS&station=FNT&station=FPK&station=GLR&station=GOV&station=GRR&station=HAI&station=HTL&station=HYX&station=IKW&station=IMT&station=IRS&station=ISQ&station=IWD&station=JXN&station=JYM&station=LAN&station=LDM&station=LWA&station=MBL&station=MBS&station=MCD&station=MGN&station=MKG&station=MNM&station=MOP&station=MTC&station=OEB&station=ONZ&station=OSC&station=OZW&station=P53&station=P58&station=P59&station=PHN&station=PLN&station=PTK&station=PZQ&station=RMY&station=RNP&station=RQB&station=SAW&station=SJX&station=SLH&station=TEW&station=TTF&station=TVC&station=VLL&station=Y31&station=Y70&station=YIP&data=tmpf&data=dwpf&data=relh&data=drct&data=sknt&data=gust&data=p01i&data=mslp&data=alti&data=wxcodes&sts=2024-05-28T00%3A00%3A00Z&ets=2024-09-01T00%3A00%3A00Z&tz=Etc%2FUTC&format=onlycomma&report_type=3&report_type=4&latlon=no&missing=M&trace=0.0001&direct=no",
+      "sha256": "5370d082f46b24f3a8e7a707ff6d460975b8bddcd86eb8e689e9d7bcd5fd9b01",
+      "source_rows": 369444,
+      "stations": 75,
+      "rejected_numeric_values": {
+        "temperature_c": 0,
+        "dewpoint_c": 0,
+        "humidity_pct": 0,
+        "wind_kmh": 0,
+        "gust_kmh": 0,
+        "precip_mm": 0,
+        "pressure_hpa": 0,
+        "altimeter_hpa": 0
+      },
+      "availability": "Hourly bin ending h+1 assumed delivered by h+2; unverified latency",
+      "weather_codes": "No reported code means flag 0 only when a station report exists",
+      "quality": "IEM as-is observations; range checks, not full NOAA quality certification"
+    }
+  ],
+  "weather_method": "75 Michigan ASOS stations; existing inverse-distance spatial aggregation; observation fields delayed by two hours as assumed availability.",
+  "storm_inputs": "METAR-reported thunderstorm, squall and heavy-rain codes; NWS bulletin-warning inputs omitted because historical warning archives were not verified for all years.",
+  "dataset_sha256": "d275f21b6489da2348ae1baeb493cef6690dbbf093e7898d76a3f66d4a9ce3c1",
+  "dataset_file_bytes": 168915944
+}
