@@ -17,19 +17,24 @@ const UI = {
   chart(id, points, title, xLabel, yLabel, baseline) {
     const ns='http://www.w3.org/2000/svg';
     const make=(name,attrs,text)=>{const e=document.createElementNS(ns,name);for(const [key,value] of Object.entries(attrs))e.setAttribute(key,String(value));if(text!=null)e.textContent=text;return e;};
-    const svg=make('svg',{viewBox:'0 0 700 370',role:'img','aria-label':title,style:'width:100%;height:auto;background:#091520;border-radius:6px'});
-    const x=n=>65+Math.max(0,Math.min(1,n))*595,y=n=>310-Math.max(0,Math.min(1,n))*260;
-    svg.append(make('text',{x:65,y:26,fill:'#e9f1fb','font-size':16},title));
-    for(let i=0;i<=5;i++){
-      const t=i/5;
-      svg.append(make('line',{x1:x(t),x2:x(t),y1:50,y2:310,stroke:'#22384b'}),make('line',{x1:65,x2:660,y1:y(t),y2:y(t),stroke:'#22384b'}));
-      svg.append(make('text',{x:x(t),y:332,fill:'#a6b8ca','font-size':11,'text-anchor':'middle'},t.toFixed(1)),make('text',{x:52,y:y(t)+4,fill:'#a6b8ca','font-size':11,'text-anchor':'end'},t.toFixed(1)));
-    }
-    svg.append(make('line',{x1:65,y1:baseline==null?310:y(baseline),x2:660,y2:baseline==null?50:y(baseline),stroke:'#8da0b3','stroke-dasharray':'6 6'}));
-    const path=points.map(([a,b],i)=>`${i?'L':'M'}${x(a).toFixed(2)},${y(b).toFixed(2)}`).join(' ');
-    svg.append(make('path',{d:path,fill:'none',stroke:'#f5c663','stroke-width':2.5}));
-    svg.append(make('text',{x:360,y:360,fill:'#a6b8ca','font-size':12,'text-anchor':'middle'},xLabel),make('text',{x:16,y:185,fill:'#a6b8ca','font-size':12,transform:'rotate(-90 16 185)','text-anchor':'middle'},yLabel));
-    this.$(id).replaceChildren(svg);
+    const host=this.$(id);host.chartObserver?.disconnect();let previousWidth;
+    const draw=()=>{
+      const width=Math.round(host.clientWidth)||700;if(width===previousWidth)return;previousWidth=width;
+      const right=width-20,svg=make('svg',{viewBox:`0 0 ${width} 335`,role:'img','aria-label':title,class:'chart'});
+      const x=n=>55+Math.max(0,Math.min(1,n))*(right-55),y=n=>280-Math.max(0,Math.min(1,n))*230;
+      svg.append(make('text',{x:15,y:26,fill:'var(--ink)','font-size':14},title));
+      for(let i=0;i<=5;i++){
+        const t=i/5;
+        svg.append(make('line',{x1:x(t),x2:x(t),y1:50,y2:280,stroke:'var(--line)'}),make('line',{x1:55,x2:right,y1:y(t),y2:y(t),stroke:'var(--line)'}));
+        svg.append(make('text',{x:x(t),y:299,fill:'var(--muted)','font-size':11,'text-anchor':'middle'},t.toFixed(1)),make('text',{x:45,y:y(t)+4,fill:'var(--muted)','font-size':11,'text-anchor':'end'},t.toFixed(1)));
+      }
+      svg.append(make('line',{x1:55,y1:baseline==null?280:y(baseline),x2:right,y2:baseline==null?50:y(baseline),stroke:'var(--muted)','stroke-dasharray':'6 6'}));
+      const path=points.map(([a,b],i)=>`${i?'L':'M'}${x(a).toFixed(2)},${y(b).toFixed(2)}`).join(' ');
+      svg.append(make('path',{d:path,fill:'none',stroke:'var(--teal)','stroke-width':2.5}));
+      svg.append(make('text',{x:(55+right)/2,y:324,fill:'var(--muted)','font-size':12,'text-anchor':'middle'},xLabel),make('text',{x:16,y:165,fill:'var(--muted)','font-size':12,transform:'rotate(-90 16 165)','text-anchor':'middle'},yLabel));
+      host.replaceChildren(svg);
+    };
+    draw();host.chartObserver=new ResizeObserver(draw);host.chartObserver.observe(host);
   },
   evaluation(prefix,result) {
     const m=result.test_model,pct=n=>(100*n).toFixed(2)+'%',num=n=>n==null?'Undefined':n.toFixed(4);
