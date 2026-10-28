@@ -35,9 +35,6 @@ def draw():
                     bbox={'facecolor': '#09121d', 'edgecolor': 'none', 'pad': 3}, zorder=4)
 
     ax.text(0.5, 13.65, 'MICHIGAN OUTAGE MODEL · PIPELINE', color=ink, fontsize=21, weight='bold')
-    ax.text(0.5, 13.28, 'Project by Rohan Sai  |  County-level, next-three-hour high-burden classification',
-            color=gold, fontsize=11)
-
     box(0.6, 11.95, 7.0, 0.95, 'OUTAGE HISTORY', 'EAGLE-I county outage observations')
     box(8.4, 11.95, 7.0, 0.95, 'WEATHER + CONTEXT', 'IEM ASOS observations, county geography and calendar')
     arrow([(4.1, 11.95), (4.1, 11.67), (8.0, 11.67), (8.0, 11.35)])
