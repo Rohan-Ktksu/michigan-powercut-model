@@ -2,7 +2,7 @@
 
 Account: [Rohan-Ktksu](https://github.com/Rohan-Ktksu). Repository: `michigan-powercut-model`.
 
-The GitHub Pages website publishes `docs/` from `codex/guided-model-website`. It uses the original research model and target definition with a browser-sized demonstration, rather than substituting a different classifier or generating synthetic labels.
+The GitHub Pages website publishes `docs/` from `guided-model-website`. It uses the original research model and target definition with a browser-sized demonstration, rather than substituting a different classifier or generating synthetic labels.
 
 ## Website flow
 
