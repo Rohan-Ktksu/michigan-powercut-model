@@ -7,10 +7,11 @@ The GitHub Pages website publishes `docs/` from `guided-model-website`. It uses 
 ## Website flow
 
 1. **Dataset:** inspect real sample windows, split sizes and source provenance.
-2. **Pipeline & code:** read the original model and the browser adaptation in a scrollable source iframe.
-3. **Train Model:** load Pyodide/scikit-learn in a Web Worker, verify the compressed subset checksum, train the boosted tree through 180 iterations with progress, and select the alert threshold on 2023 validation rows.
-4. **Test Model:** evaluate the fixed model and threshold on the 2024 subset. Inspect accuracy, balanced accuracy, precision/recall/F1, ROC-AUC, average precision, ROC/PR curves, confusion matrix and a no-alert baseline. Download the result data.
-5. **Predict:** classify selected historical county windows or an uploaded CSV through the fitted model. Download predictions and inspect the exact inputs. Uploads are processed within the tab and never enter training.
+2. **Train Model:** load Pyodide/scikit-learn in a Web Worker, verify the compressed subset checksum, train the boosted tree through 180 iterations with progress, and select the alert threshold on 2023 validation rows.
+3. **Test Model:** evaluate the fixed model and threshold on the 2024 subset. Inspect accuracy, balanced accuracy, precision/recall/F1, ROC-AUC, average precision, ROC/PR curves, confusion matrix and a no-alert baseline. Download the result data.
+4. **Predict:** classify selected historical county windows or an uploaded CSV through the fitted model. Download predictions and inspect the exact inputs. Uploads are processed within the tab and never enter training.
+
+The clean light theme applies to both pages. The pipeline diagram and scrollable Python source viewer appear only on **Model & Features** (model.html#pipeline).
 
 **Model & Features** explains all 67 retained numeric predictors, exclusions, sampling, parameters and limitations. It initially displays the saved full-research results, checked against `outputs/test_2024_predictions.csv`. Completed browser tests are stored in sessionStorage under `michigan-evaluation`, and that page then labels them as browser sample results. Uploaded prediction records are not placed in that cross-page store.
 

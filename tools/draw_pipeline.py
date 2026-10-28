@@ -14,14 +14,14 @@ def draw():
     manifest = json.loads((ROOT / 'docs/site-data.json').read_text(encoding='utf-8'))
     full, sample = manifest['full_rows'], manifest['browser_rows']
     plt.rcParams.update({'font.family': 'DejaVu Sans', 'svg.fonttype': 'none'})
-    fig, ax = plt.subplots(figsize=(16, 14), facecolor='#09121d')
+    fig, ax = plt.subplots(figsize=(16, 14), facecolor='#f4f6f2')
     ax.set(xlim=(0, 16), ylim=(0, 14))
     ax.set_axis_off()
-    ink, muted, gold, blue = '#eef4fa', '#b4c5d5', '#f5c663', '#87bbf5'
+    ink, muted, gold, blue = '#203c32', '#5a6c63', '#186b4a', '#315b75'
 
     def box(x, y, w, h, title, body, accent=blue):
         ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0.015,rounding_size=0.14',
-                                   linewidth=1.3, edgecolor=accent, facecolor='#142334', zorder=2))
+                                   linewidth=1.3, edgecolor=accent, facecolor='#ffffff', zorder=2))
         ax.text(x + 0.20, y + h - 0.24, title, color=accent, fontsize=12, weight='bold', va='top', zorder=3)
         ax.text(x + 0.20, y + h - 0.61, body, color=ink, fontsize=10.2, va='top', linespacing=1.55, zorder=3)
 
@@ -32,12 +32,9 @@ def draw():
                                      linewidth=1.5, color=color, zorder=1))
         if label:
             ax.text(*label_xy, label, color=muted, fontsize=9, ha='center', va='center',
-                    bbox={'facecolor': '#09121d', 'edgecolor': 'none', 'pad': 3}, zorder=4)
+                    bbox={'facecolor': '#f4f6f2', 'edgecolor': 'none', 'pad': 3}, zorder=4)
 
     ax.text(0.5, 13.65, 'MICHIGAN OUTAGE MODEL · PIPELINE', color=ink, fontsize=21, weight='bold')
-    ax.text(0.5, 13.28, 'Project by Rohan Sai  |  County-level, next-three-hour high-burden classification',
-            color=gold, fontsize=11)
-
     box(0.6, 11.95, 7.0, 0.95, 'OUTAGE HISTORY', 'EAGLE-I county outage observations')
     box(8.4, 11.95, 7.0, 0.95, 'WEATHER + CONTEXT', 'IEM ASOS observations, county geography and calendar')
     arrow([(4.1, 11.95), (4.1, 11.67), (8.0, 11.67), (8.0, 11.35)])
