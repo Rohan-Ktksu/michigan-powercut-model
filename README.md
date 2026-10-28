@@ -1,5 +1,11 @@
 # Michigan County Power-Outage Burden Research
 
+**Project by Rohan Sai ([Rohan-Ktksu](https://github.com/Rohan-Ktksu)).**
+
+[Open the interactive Michigan Outage Lab](https://rohan-ktksu.github.io/michigan-powercut-model/) · [Model, features, accuracy & ROC curves](https://rohan-ktksu.github.io/michigan-powercut-model/model.html)
+
+The website follows the same guided format as Axynetra: dataset preview → scrollable Python pipeline → **Train Model** with real iteration progress → **Test Model** → **Predict**. The separate Model & Features page shows the original full-research results immediately and the latest browser experiment after testing. The browser trains a clearly labelled 20,000/4,000/5,000-row subset within the original chronological periods; its results must not be presented as the full-data run. See [website setup and reproduction](WEBSITE.md).
+
 **A historical, weather-enriched, three-hour high-burden alert model for Michigan counties (2014-2024)**
 
 This repository contains a reproducible research run that combines county-level outage observations with historical weather, storm, location, calendar, and recent-outage features. The model estimates whether an observed county outage-burden measure will cross a historical county-specific threshold in the next three hours.
